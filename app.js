@@ -23,6 +23,19 @@ function addNew() {
 
  sDate.addEventListener('change', minDate);
 
+ const startDatePicker = document.getElementById('sDate');
+ const displayStartDate = document.getElementById('displayStartDate');
+
+ function monthYear(){
+    const selectedStartDate = new Date(startDatePicker.value);
+
+    const month = selectedStartDate.getMonth();
+    const year = selectedStartDate.getFullYear();
+
+    displayStartDate.textContent = `${month+1}, ${year}`;
+ }
+ startDatePicker.addEventListener('change',monthYear);
+
 
 
 
