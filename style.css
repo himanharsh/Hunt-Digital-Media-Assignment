@@ -119,3 +119,8 @@ body {
       padding: 1em !important;
     }
   }
+
+  #dateRangePicker::-webkit-calendar-date-picker-dates-cell[selected],
+  #dateRangePicker::-webkit-calendar-date-picker-dates-cell:focus {
+    background-color: yellow;
+  }

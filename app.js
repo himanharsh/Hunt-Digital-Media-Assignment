@@ -15,27 +15,47 @@ function addNew() {
 
  const sDate = document.getElementById('sDate');
  const eDate = document.getElementById('eDate');
+ const displayStartDate = document.getElementById('displayStartDate');
+ const dateRangePicker = document.getElementById('dateRangePicker');
+
+ let selectedDates = [];
+
+ function updateSelectedDates() {
+    const selectedOptions = dateRangePicker.selectedOptions;
+    selectedDates = Array.from(selectedOptions).map(option => option.value);
+  }
 
  function minDate(){
    const selectedSDate = sDate.value;
    eDate.min = selectedSDate;
+   dateRangePicker.min = selectedSDate;
+   updateSelectedDates();
+ }
+
+ function maxDate(){
+    const selectedEDate = eDate.value;
+    dateRangePicker.max = selectedEDate;
+    updateSelectedDates();
  }
 
  sDate.addEventListener('change', minDate);
-
- const startDatePicker = document.getElementById('sDate');
- const displayStartDate = document.getElementById('displayStartDate');
+ eDate.addEventListener('change', maxDate);
 
  function monthYear(){
-    const selectedStartDate = new Date(startDatePicker.value);
+    const selectedStartDate = new Date(sDate.value);
 
     const month = selectedStartDate.getMonth();
     const year = selectedStartDate.getFullYear();
 
     displayStartDate.textContent = `${month+1}, ${year}`;
  }
- startDatePicker.addEventListener('change',monthYear);
 
+ sDate.addEventListener('change',monthYear);
 
+ dateRangePicker.addEventListener('change', function() {
+    updateSelectedDates();
+  });
+
+console.log(selectedDates.size);
 
 
