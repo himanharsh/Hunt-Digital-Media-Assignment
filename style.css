@@ -19,48 +19,50 @@ body {
       display: block;
       text-align: center;
     }
-
-.table {
-    margin: auto;
-    min-width: 300px;
-    max-width: 100%;
-    border-collapse: collapse;
-  }
+    #table td {
+        border: 1px solid #00000043;
+    }
+    #table {
+        margin: auto;
+        min-width: 300px;
+        max-width: 100%;
+        border-collapse: collapse;
+    }
   
-  .table tr:first-child {
+  #table tr:first-child {
     border-top: none;
     background: midnightblue;
     color: #fff;
   }
   
-  .table tr {
+  #table tr {
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
     background-color: #f5f9fc;
     font-weight: 600;
   }
   
-  .table tr:nth-child(odd):not(:first-child) {
+  #table tr:nth-child(odd):not(:first-child) {
     background-color: #ebf3f9;
   }
   
-  .table th {
+  #table th {
     display: none;
   }
   
-  .table td {
+  #table td {
     display: block;
   }
   
-  .table td:first-child {
+  #table td:first-child {
     margin-top: .5em;
   }
   
-  .table td:last-child {
+  #table td:last-child {
     margin-bottom: .5em;
   }
   
-  .table td:before {
+  #table td:before {
     content: attr(data-th) ": ";
     font-weight: bold;
     width: 120px;
@@ -68,52 +70,52 @@ body {
     color: #000;
   }
   
-  .table th,
-  .table td {
+  #table th,
+  #table td {
     text-align: left;
   }
   
-  .table {
+  #table {
     color: #333;
     border-radius: .4em;
     overflow: hidden;
   }
   
-  .table tr {
+  #table tr {
     border-color: #bfbfbf;
   }
   
-  .table th,
-  .table td {
+  #table th,
+  #table td {
     padding: .5em 1em;
   }
   @media screen and (max-width: 601px) {
-    .table tr:nth-child(2) {
+    #table tr:nth-child(2) {
       border-top: none;
     }
   }
   @media screen and (min-width: 600px) {
-    .table tr:hover:not(:first-child) {
+    /* #table tr:hover:not(:first-child) {
       background-color: #d8e7f3;
-    }
-    .table td:before {
+    } */
+    #table td:before {
       display: none;
     }
-    .table th,
-    .table td {
+    #table th,
+    #table td {
       display: table-cell;
       padding: .25em .5em;
     }
-    .table th:first-child,
-    .table td:first-child {
+    #table th:first-child,
+    #table td:first-child {
       padding-left: 0;
     }
-    .table th:last-child,
-    .table td:last-child {
+    #table th:last-child,
+    #table td:last-child {
       padding-right: 0;
     }
-    .table th,
-    .table td {
+    #table th,
+    #table td {
       padding: 1em !important;
     }
   }

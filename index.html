@@ -8,11 +8,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <script src="app.js"></script>
     <div class="container">
         <h1>Hunt Digital Media</h1>
         <h3>Daily Run Rate (DRR)</h3>
-          <table class="table">
+        <button id="addNewButton" onclick="addNew()">Add New</button>
+          <table id="table">
             <tbody>
               <tr>
                 <th>Action</th>
@@ -28,10 +28,9 @@
               </tr>
               <tr>
                 <td data-th="Action">
-                  UPS5005
                 </td>
                 <td data-th="ID">
-                  UPS
+                  1
                 </td>
                 <td data-th="Start Date">
                   ASDF19218
@@ -61,5 +60,6 @@
             </tbody>
           </table>
         </div>
+        <script src="app.js"></script>
 </body>
 </html>
