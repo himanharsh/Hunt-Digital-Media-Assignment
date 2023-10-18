@@ -13,6 +13,15 @@ function addNew() {
     }
  }
 
+ const sDate = document.getElementById('sDate');
+ const eDate = document.getElementById('eDate');
+
+ function minDate(){
+   const selectedSDate = sDate.value;
+   eDate.min = selectedSDate;
+ }
+
+ sDate.addEventListener('change', minDate);
 
 
 
